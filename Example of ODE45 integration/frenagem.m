@@ -14,17 +14,18 @@ grid
 
 title('Relação Deslocamento e Velocidade pelo Tempo');
 
-yyaxis left
+subplot(211)
 plot(TOUT, YOUT(:,1))
 xlabel('Tempo (s)');
 ylabel('[m]');
+legend('Deslocamento');
 
-yyaxis right
+subplot(212)
 plot(TOUT, YOUT(:,2))
 xlabel('Tempo (s)');
 ylabel('[m/s]');
 
-legend('Deslocamento','Velocidade');
+legend('Velocidade');
 
 
     
