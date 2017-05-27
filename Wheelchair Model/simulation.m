@@ -17,13 +17,13 @@ function [] = simulation(opt)
     f_wheel_size = 8*0.0254;
     
     % Fase 1
-   phio = [-atan2(r_wheel_size-f_wheel_size*2, dist_rodas); pi/2];
+%   phio = [-atan2(r_wheel_size-f_wheel_size*2, dist_rodas); pi/2];
     % Fase 2
-%     phio = [atan2(dist_rodas, r_wheel_size-f_wheel_size*2); pi];
+    phio = [atan2(dist_rodas, r_wheel_size-f_wheel_size*2); pi];
      
     w = sys_wheelchair();
     CG = solveCG(w.Uh, w.Um);
-    figure()
+    figure('units','normalized','outerposition',[0 0 1 1]);
     first_frame = true;     
     while time < 8
         % Compute the position of the system at the current real world time

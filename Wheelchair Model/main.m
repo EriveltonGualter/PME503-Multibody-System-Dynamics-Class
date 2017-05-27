@@ -25,14 +25,14 @@ data2.phid = Yout2(:,2);
 data2.theta = Yout2(:,3);
 data2.thetad = Yout2(:,4);
 
-
 data.ti = vertcat(data1.ti ,data2.ti);
 data.phi = vertcat(data1.phi ,data2.phi);
 data.phid = vertcat(data1.phid ,data2.phid);
 data.theta = vertcat(data1.theta ,data2.theta);
 data.thetad = vertcat(data1.thetad ,data2.thetad);
 
-pt(data);
 
+simulation(data);
 
-
+% figure(2);
+% pt(data);

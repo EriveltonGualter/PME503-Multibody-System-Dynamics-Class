@@ -124,23 +124,23 @@ else
         'Position',[f_wheel_posx-0.01 f_wheel_posy-0.01 0.02 0.02]);
 end
 
-CG_mod = sqrt(CG(1,1)*CG(1,1)+CG(2,1)*CG(2,1));
-cg_angle = atan2(CG(1,1),CG(2,1));
-cg_x =  CG_mod*cos(cg_angle-phi) + pos ;
-cg_y =  CG_mod*sin(cg_angle-phi) + r_wheel_size/2;
-
-% Draw the rear axle:
-if isempty(cgHandle)
-    cgHandle = rectangle(...
-        'Position',[cg_x-0.02 cg_y-0.02 0.04 0.04],...
-        'Curvature',[1,1],... 
-        'LineWidth',2,...
-        'FaceColor',[0,0,1],...
-        'EdgeColor',[0,0,1]);
-else
-    set(cgHandle,...
-        'Position',[cg_x-0.01 cg_y-0.01 0.02 0.02]);
-end
+% CG_mod = sqrt(CG(1,1)*CG(1,1)+CG(2,1)*CG(2,1));
+% cg_angle = atan2(CG(1,1),CG(2,1));
+% cg_x =  CG_mod*cos(cg_angle-phi) + pos ;
+% cg_y =  CG_mod*sin(cg_angle-phi) + r_wheel_size/2;
+% 
+% % Draw the rear axle:
+% if isempty(cgHandle)
+%     cgHandle = rectangle(...
+%         'Position',[cg_x-0.02 cg_y-0.02 0.04 0.04],...
+%         'Curvature',[1,1],... 
+%         'LineWidth',2,...
+%         'FaceColor',[0,0,1],...
+%         'EdgeColor',[0,0,1]);
+% else
+%     set(cgHandle,...
+%         'Position',[cg_x-0.01 cg_y-0.01 0.02 0.02]);
+% end
 
 
 % Format the axis so things look right:
